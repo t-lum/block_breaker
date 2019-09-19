@@ -5,6 +5,7 @@ using UnityEngine;
 public class Platform : MonoBehaviour
 {
     public float MovimentVelocity = 13.5f;
+    public float AxisXLimit = 7.4f;
 
     // Start is called before the first frame update
     void Start()
@@ -26,5 +27,9 @@ public class Platform : MonoBehaviour
             GetComponent<Transform>().position 
                 += Vector3.right * MovimentVelocity * Time.deltaTime;
         }
+
+        float xAxis = transform.position.x;
+        xAxis = Mathf.Clamp(xAxis, -AxisXLimit, AxisXLimit);
+        transform.position = new Vector3(xAxis, transform.position.y, transform.position.z);
     }
 }
