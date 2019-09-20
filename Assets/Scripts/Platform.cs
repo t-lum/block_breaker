@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class Platform : MonoBehaviour
 {
-    public float MovimentVelocity = 13.5f;
-    public float AxisXLimit = 7.4f;
+    public float MovimentVelocity;
+    public float AxisXLimit;
 
     // Start is called before the first frame update
     void Start()
     {
-
+        MovimentVelocity = 13.5f;
+        AxisXLimit = 7.4f;
     }
 
     // Update is called once per frame

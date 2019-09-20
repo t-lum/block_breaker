@@ -23,15 +23,6 @@ public class EdgeManager : MonoBehaviour
             bottomRight,
             bottomLeft
         };
-
-        //colisor.points = new Vector2[5]
-        //{
-        //    bottomLeft,
-        //    topLeft,
-        //    bottomRight,
-        //    topRight,
-        //    bottomLeft
-        //};
     }
 
     // Update is called once per frame
