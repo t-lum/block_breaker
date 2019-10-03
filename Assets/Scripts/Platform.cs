@@ -11,7 +11,8 @@ public class Platform : MonoBehaviour
     void Start()
     {
         MovimentVelocity = 13.5f;
-        AxisXLimit = 7.4f;
+        AxisXLimit = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, 0, 0)).x
+            - GetComponent<SpriteRenderer>().bounds.extents.x;
     }
 
     // Update is called once per frame
