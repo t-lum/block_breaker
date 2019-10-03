@@ -41,6 +41,11 @@ public class Ball : MonoBehaviour
                 invalidCollision = true;
             }
         }
+        else
+        {
+            invalidCollision = false;
+            Destroy(collisor.gameObject);
+        }
         if (!invalidCollision)
         {
             Direction = Vector2.Reflect(Direction, normal);
